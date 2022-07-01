@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="UIproj.asettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"             
+             xmlns:local="clr-namespace:UIproj"
+             mc:Ignorable="d" 
+             d:DesignHeight="390" d:DesignWidth="930" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Margin="0 10 0 0">
+            <StackPanel>
+                <TextBlock Text="User Details" Margin="15,0,0,3" VerticalAlignment="Top" FontWeight="DemiBold" FontSize="14"/>
+                <Border Margin="10 0" BorderThickness="1" BorderBrush="LightGray" CornerRadius="2">
+                    <StackPanel Margin="10 0 0 0">
+                        <TextBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="Username" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14" BorderBrush="LightGray"/>
+                        <PasswordBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="200" FontSize="14" BorderBrush="LightGray"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Margin="0 0 0 10" materialDesign:HintAssist.Hint="Email" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14" BorderBrush="LightGray"/>
+                            <Button Margin="110 0 0 0" Content="Save" HorizontalAlignment="Right" VerticalAlignment="Center" Width="80" Background="White" BorderBrush="White" Foreground="Black" Padding="0" IsTabStop="False"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Margin="0 10 0 10">
+            <StackPanel>
+                <TextBlock Text="Backup and Exports" Margin="15,0,0,3" VerticalAlignment="Top" FontWeight="DemiBold" FontSize="14"/>
+                <Border Margin="10 0" BorderThickness="1" BorderBrush="LightGray" CornerRadius="2">
+                    <StackPanel Margin="10 0 0 0">
+                        <TextBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="Name of File" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14" BorderBrush="LightGray"/>
+                        <TextBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="Email" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14" BorderBrush="LightGray"/>
+                        <StackPanel Orientation="Horizontal">
+                            <ComboBox Margin="0 0 0 10" materialDesign:HintAssist.Hint="Table Name" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" Text="" VerticalAlignment="Top" Width="200" FontSize="14" BorderBrush="LightGray">
+                                <ComboBoxItem>
+                                    <TextBlock Text="Products Table" />
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Dispensary" />
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Sales Table" />
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Category Table" />
+                                </ComboBoxItem>
+                            </ComboBox>
+                            <Button Margin="110 5 0 0" Content="Export" HorizontalAlignment="Right" VerticalAlignment="Center" Width="80" Background="White" BorderBrush="White" Foreground="Black" Padding="0" IsTabStop="False"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Margin="0 0 0 0">
+            <StackPanel>
+                <TextBlock Text="Entertainment Prefrences" Margin="15,0,0,3" VerticalAlignment="Top" FontWeight="DemiBold" FontSize="14"/>
+                <Border Margin="10 0" BorderThickness="1" BorderBrush="LightGray" CornerRadius="2">
+                    <StackPanel Margin="10 0 0 0">
+                        <TextBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="Name of Entertainment Window" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="211" FontSize="14" BorderBrush="LightGray"/>
+                        <TextBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="Site of Choice Url" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="211" FontSize="14" BorderBrush="LightGray"/>
+                        <Button Margin="0 10 45 8" Content="Save" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="80" Background="White" BorderBrush="White" Foreground="Black" Padding="0" IsTabStop="False"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="0 0 0 10">
+            <StackPanel>
+                <TextBlock Text="To Do List" Margin="15,0,0,3" VerticalAlignment="Top" FontWeight="DemiBold" FontSize="14"/>
+                <Border Margin="10 0" BorderThickness="1" BorderBrush="LightGray" CornerRadius="2">
+                    <StackPanel Margin="10 0 0 0">
+                        <Frame x:Name="toDoframe" NavigationUIVisibility="Hidden" Background="Transparent" Height="130" Margin="0 3 4 0"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>

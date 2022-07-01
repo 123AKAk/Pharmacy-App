@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="UIproj.notification"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIproj"
+             mc:Ignorable="d" 
+             d:DesignHeight="390" d:DesignWidth="930">
+    <Grid>
+        <DataGrid x:Name="OwedCust" Width="920" HorizontalAlignment="Center" FontSize="15" FontFamily="Century Gothic" CanUserSortColumns="True" CanUserReorderColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" BorderThickness="0" Background="Transparent"
+            />
+    </Grid>
+</UserControl>

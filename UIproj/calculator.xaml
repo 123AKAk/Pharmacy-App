@@ -1,0 +1,159 @@
+﻿<Window x:Class="UIproj.calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:UIproj"
+        mc:Ignorable="d"
+        Title="Calculator" Height="395" Width="255" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Background="White" Foreground="{x:Null}">
+    <Grid>
+        <materialDesign:Card Margin="5" UniformCornerRadius="5" Background="White">
+            <Grid Margin="0,0,0,0" x:Name="Calculator">
+                <!--<Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>-->
+                <StackPanel Margin="8 0 5 0">
+                    <Border HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Background="#FF939090" CornerRadius="5" Height="50" Margin="0,10" BorderBrush="White" Width="216">
+                        <TextBox x:Name="lblResult" 
+                       Text="0" Margin="5"
+                       VerticalAlignment="Center" 
+                       FontSize="25" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" Padding="5,5,0,5"/>
+                    </Border>
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="216">
+                        <Button x:Name="btnAc" 
+                        Content="AC"
+                        Click="btnAc_Click"                
+                        Foreground="White"
+                        FontSize="20" Height="50" Background="Black" ToolTip="Clear" Width="50" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,-0.1" BorderBrush="Black"/>
+
+                        <Button x:Name="btnNegative" 
+                        Content="+/-"                
+                        Click="btnNegative_Click"                
+                        Foreground="Gray"
+                        FontSize="20" Height="50" Cursor="Arrow" Width="50" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="WhiteSmoke" Padding="0,0,0,-0.1" BorderBrush="WhiteSmoke"/>
+
+                        <Button x:Name="btnPercentage" 
+                        Content="%"                
+                        Click="btnPercentage_Click"                
+                        Foreground="Gray"
+                        FontSize="22" Height="50" Cursor="Arrow" Width="50" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="WhiteSmoke" Padding="0,0,0,-0.1" BorderBrush="WhiteSmoke"/>
+
+                        <Button x:Name="btnDivide" 
+                        Content="/"
+                        Click="btnOperation_Click"               
+                        FontSize="22" Height="50" Background="WhiteSmoke" BorderBrush="WhiteSmoke" Cursor="Arrow" Width="50" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,-0.1" Foreground="Gray"
+                        />
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="216">
+                        <Button x:Name="btnSeven" 
+                        Content="7"
+                        Click="btnNumber_Click"                
+                        FontSize="22" Height="50" Cursor="Arrow" Margin="2" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Padding="0,0,0,-0.1" Foreground="Gray" BorderBrush="White"
+                        />
+                        <Button x:Name="btnEight" 
+                        Content="8"
+                        Click="btnNumber_Click"                
+                        FontSize="22" Height="50" Cursor="Arrow" Margin="2" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Padding="0,0,0,-0.1" Foreground="Gray" BorderBrush="White"
+                        />
+                        <Button x:Name="btnNine" 
+                        Content="9"
+                        Click="btnNumber_Click"                
+                        Foreground="Gray"
+                        FontSize="22" Height="50" Cursor="Arrow" Margin="2" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Padding="0,0,0,-0.1" BorderBrush="White"/>
+                        <Button x:Name="btnMultiple" 
+                        Content="*"
+                        Click="btnOperation_Click"                
+                        Foreground="Gray"
+                        FontSize="22" Height="50" Background="WhiteSmoke" BorderBrush="WhiteSmoke" Cursor="Arrow" Width="50" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,-0.1"/>
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="216">
+                        <Button x:Name="btnFour" 
+                        Content="4"
+                        Click="btnNumber_Click"                
+                        Foreground="Gray"
+                        FontSize="22" Height="50" Cursor="Arrow" Width="50" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Padding="0,0,0,-0.1" BorderBrush="White"/>
+
+                        <Button x:Name="btnFive" 
+                        Content="5"
+                        Click="btnNumber_Click"                
+                        Foreground="Gray"
+                        FontSize="22" Height="50" Cursor="Arrow" Width="50" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Padding="0,0,0,-0.1" BorderBrush="White"/>
+
+                        <Button x:Name="btnSix" 
+                        Content="6"
+                        Click="btnNumber_Click"                
+                        Height="50"                
+                        FontSize="22" Cursor="Arrow" Width="50" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Padding="0,0,0,-0.1" Foreground="Gray" BorderBrush="White"
+                        />
+
+                        <Button x:Name="btnMinus" 
+                        Content="-"
+                        Click="btnOperation_Click"                
+                        FontSize="22" Height="50" BorderBrush="WhiteSmoke" Background="WhiteSmoke" VerticalAlignment="Center" Cursor="Arrow" Width="50" Margin="2" HorizontalAlignment="Center" Padding="0,0,0,-0.1" Foreground="Gray"
+                        />
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="216">
+                        <Button x:Name="btnOne" 
+                        Content="1"
+                        Click="btnNumber_Click"                
+                        FontSize="22" Height="50" Cursor="Arrow" Background="White" Padding="0,0,0,-0.1" Width="50" Margin="2" Foreground="Gray" BorderBrush="White"
+                        />
+
+                        <Button x:Name="btnTwo" 
+                        Content="2"
+                        Click="btnNumber_Click"                                
+                        FontSize="22" Height="50" Cursor="Arrow" Background="White" Padding="0,0,0,-0.1" Width="50" Margin="2" Foreground="Gray" BorderBrush="White"
+                        />
+
+                        <Button x:Name="btnThree" 
+                        Content="3"
+                        Click="btnNumber_Click"                                
+                        FontSize="22" Height="50" Cursor="Arrow" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Padding="0,0,0,-0.1" Margin="2" Foreground="Gray" BorderBrush="White"
+                        />
+
+                        <Button x:Name="btnPlus" 
+                        Content="+"
+                        Click="btnOperation_Click"                
+                        FontSize="22" Height="50" BorderBrush="WhiteSmoke" Background="WhiteSmoke" Cursor="Arrow" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,-0.1" Margin="2" Foreground="Gray"
+                        />
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="216">
+                        <Button x:Name="btnZero" 
+                        Content="0"
+                        Click="btnNumber_Click"                
+                        FontSize="22" Height="50" BorderBrush="White" Cursor="Arrow" Width="104" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Padding="0,0,0,-0.1" Margin="2" Foreground="Gray"
+                        />
+
+                        <Button x:Name="btnDot" 
+                        Content="."                
+                        Click="btnDot_Click"                
+                        FontSize="22" Height="50" Background="WhiteSmoke" Foreground="Gray" BorderBrush="WhiteSmoke" Cursor="Arrow" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,-0.1" Margin="2"
+                        />
+
+                        <Button x:Name="btnEqual" 
+                        Content="="
+                        Click="btnEqual_Click"                
+                        FontSize="22" Height="50" BorderBrush="Gray" Background="Gray" ToolTip="Equals" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,-0.1" Margin="2" Foreground="White" 
+                        />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>
