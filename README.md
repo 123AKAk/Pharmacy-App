@@ -1,0 +1,6 @@
+![Pharmacy App Main Screen](https://github.com/123AKAk/Pharmacy-App/assets/46349404/f9a6d3bb-e500-4000-b29a-dd880b9d625d)
+![Pharmacy App Login Screen](https://github.com/123AKAk/Pharmacy-App/assets/46349404/dec0986e-813b-4119-b66c-ecdb484f1d5c)
+![Pharmacy App Admin Users](https://github.com/123AKAk/Pharmacy-App/assets/46349404/a6823bb9-1108-42a2-a884-19c9f805fb5c)
+![Pharmacy App Admin Main Screen](https://github.com/123AKAk/Pharmacy-App/assets/46349404/693cee08-7d96-43c0-9f75-e164e143cd5f)
+![Pharmacy App Settings Screen](https://github.com/123AKAk/Pharmacy-App/assets/46349404/fc4c7c13-c2a4-448f-aa2c-78d90e74386f)
+![Pharmacy App Sales Screen](https://github.com/123AKAk/Pharmacy-App/assets/46349404/611e18b8-017f-41cf-9de2-fd0446ed2d6f)
